@@ -1,19 +1,19 @@
 # JHUPIEGO-RISE
 
 ## Table of Contents
-1. [Overview](#Overview)
+1. [Overview](#overview)
 2. [Technologies](#technologies)
 3. [Installation](#installation)
-4. [Folder Structure](#folder structure)
-5. [How to Run](#how to run)
+4. [Folder Structure](#folder-structure)
+5. [How to Run](#how-to-run)
 6. [FAQs](#faqs)
-7. [Other Links and Resources](#links and resources)
+7. [Other Links and Resources](#other-links-and-resources)
 
 ## Overview
 ***
 
-This repository represents work completed by [Palindrome data](https://www.palindromedata.com/) in developing a predictive model for interruption in treatment. 
-It includes data validation, exploratory data analysis, feature engineeering, modelling and scorecard generation. For more information check out the docs folder. 
+This repository represents work completed by [Palindrome Data](https://www.palindromedata.com/) in developing a predictive model for interruption in treatment. 
+It includes data validation, exploratory data analysis, feature engineeering, and modelling. For more information check out the docs folder. 
 
 ## Technologies
 ***
@@ -51,7 +51,7 @@ Below are steps to create an environment (if you have not yet), install the rele
 1. In the terminal run `conda info -e` to check what environments are installed. 
 2. If you would like to use en existing environment you use the command `conda activate <environment name>`
 3. To create a new environment, run `conda create -name RISE38 python=3.8`. Then run `conda activate RISE`.
-3. Run `conda list` to check the installed packages. **Note:** If you are using and existing environment (i.e.not RISE38), packages will have to be installed individually. For the newly created `RISE38` environment, in the open terminal window run
+3. Run `conda list` to check the installed packages. **Note:** If you are using an existing environment (i.e.not RISE38), packages will have to be installed individually. For the newly created `RISE38` environment, in the open terminal window run
 `pip install -r requirement.txt`. Then run `conda list` to check if packages are installed.
 
 ## Folder Structure
@@ -74,12 +74,11 @@ Below is a description of the contents in each folder.
 | 003_Ingestion| This folder contains notebooks for data cleaning, feature engineering and creating the unified view|
 |004_Modelling|This folder  contains notebooks for experimental modelling|
 |005_Risk_Segmentation|This folder contains notebooks for measuring the depth of file|
-|006_Scorecard|This folder contains a notebook for the scorecard generation.|
 |007_Cohort_Analysis|This folder contains a notebooks for modelling IIT in Akwa Ibom.|
 |profile_Reports|This folder contains a notebook for profiling data|
 
 ### src
-This folder contains the hiv_support_package with module which do feature engineering, assits with eda and data cleaning and the scoreacrd generation.
+This folder contains the hiv_support_package with module which do feature engineering, assits with eda and data cleaning.
 
 - [**docs**](docs)
 - [**notebooks**](notebooks)
@@ -113,12 +112,10 @@ This folder contains the hiv_support_package with module which do feature engine
         - [002\_Augmented\_Model\_Logged.ipynb](notebooks/004\_Modelling/002\_Augmented\_Model\_Logged.ipynb)
     - [**005\_Risk_Segmentation**](notebooks/005\_Risk_Segmentation)
         - [002\_Risk\_Segmentation.ipynb](notebooks/005\_Risk\_Segmentation/002\_Risk\_Segmentation.ipynb)
-    - [**006\_Scorecard**](notebooks/006\_Scorecard)
-        - [006\_Scorecard\_Generation.ipynb](notebooks/006\_Scorecard/001\_Scorecard\_Generation.ipynb)
     - [**007\_Cohort_Analysis**](notebooks/007\_Cohort_Analysis)
         - [**FeatureGroups**](notebooks/007\_Cohort_Analysis/FeatureGroups)
         - [**mlruns**](notebooks/007\_Cohort_Analysis/mlruns)
-        - [001\_Cohort\_Analysis_Akwa_Ibom.ipynb](notebooks/007\_Cohort Analysis_Akwa_Ibom/.ipynb)
+        - [001_Cohort Analysis_Akwa_Ibom.ipynb](notebooks/007_Cohort_Analysis/001_Cohort%20Analysis_Akwa_Ibom/.ipynb)
     - [**profile_Reports**](notebooks/profile_Reports)
     - [**Figures**](Figures)
 - [**src**](src)
@@ -127,7 +124,7 @@ This folder contains the hiv_support_package with module which do feature engine
 ## How to Run
 ***
 
-There are several pipelines whose main purpose is for for data validation, model building and scorecard generation. for model building.
+There are several pipelines whose main purpose is for for data validation and model building. for model building.
 
 Below is an diagram of how to run the notebooks to produce the final predictive model:
 
@@ -138,7 +135,7 @@ Below is an diagram of how to run the notebooks to produce the final predictive 
 3. The notebooks run as ingestion -> unified view creation -> model.
 - Run `001_Pharmacy_Merge.ipynb` to merge the the pharmacy data.
 - Then run `002_RISE_Patients_Feature.ipynb`, then `003_RISE_Labs_Feature.ipynb`, then `004_RISE_Pharmacy_Feature.ipynb`, then `005_RISE_Clinic_Feature.ipynb` and `006_RISE_Eac_Otz_Feature.ipynb`. These will output `feature_<dataset>.csv` in the data folder created on you local drive. 
-- Now run the `006_RISE_Unified_View.ipynb` notebooks which takes all thoses feature csv and merges them accordingly and outputs a `unified_view.csv`. This `unified_view.csv` is the input csv for modelling, scorecard generation.
+- Now run the `006_RISE_Unified_View.ipynb` notebooks which takes all thoses feature csv and merges them accordingly and outputs a `unified_view.csv`. This `unified_view.csv` is the input csv for modelling.
 - Then open and run `001_Augmented_Model_Logged.ipynb` to produce the model, it's metrics and the `model.pkl` in the `mlruns` folder.
  
 
@@ -146,7 +143,7 @@ Below is an diagram of how to run the notebooks to produce the final predictive 
 ***
 - [*How to download anaconda?*](https://towardsdatascience.com/anaconda-start-here-for-data-science-in-python-475045a9627)
 - [*How to use MLFlow?*](https://www.mlflow.org/docs/latest/tutorials-and-examples/tutorial.html)
-- *Where should I create a local data folder?* Create a data folder on your local machine outside you git repo and ensure your gitignore has included excel files and csvs. 
+- *Where should I create a local data folder?* Create a data folder on your local machine outside your git repo and ensure your gitignore has included excel files and csv's so raw data is not stored in the repo. 
 
 ## Other Links and Resources
 ***
