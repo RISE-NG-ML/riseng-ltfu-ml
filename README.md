@@ -73,7 +73,7 @@ Below is a description of the contents in each folder.
 |   002_EDA |    This folder contains notebooks for performing exploratory data analysis and comparative visits and drugs pickups analysis    |
 | 003_Ingestion| This folder contains notebooks for data cleaning, feature engineering and creating the unified view|
 |004_Modelling|This folder  contains notebooks for experimental modelling|
-|005_Risk_Segmentation|This folder contains notebooks for measuring the depth of file|
+|005_Risk_Segmentation|This folder contains notebooks for measuring the depth of file i.e what is the LTFU rate for different segments of the poulation in the high, mid and low risk groups|
 |007_Cohort_Analysis|This folder contains a notebooks for modelling IIT in Akwa Ibom.|
 |profile_Reports|This folder contains a notebook for profiling data|
 
@@ -125,8 +125,8 @@ This folder contains the hiv_support_package with module which do feature engine
     - [**modelling**](notebooks-for-sharing/modelling)
 
 Phase 2 (updated modelling) also includes: 
-    - [**DataChecks**](notebooks/DataChecks)
-    - [**2022_model**](notebooks/2022_model)
+- [**DataChecks**](notebooks/DataChecks)
+- [**2022_model**](notebooks/2022_model)
 
 
 ## How to Run
