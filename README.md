@@ -38,10 +38,10 @@ Below are steps to create an environment (if you have not yet), install the rele
 2. If you already have the repo on your local computer, go to the rise git repo [here](https://github.com/RISE-NG-ML/riseng-ltfu-ml) and `git pull` in you command.
 
 3. Then run the command below to unzip the contents:
-`unzip jhupiego_rise_phase1-master.zip`
+`unzip jhupiego_rise_phase1-feature-paper_stats_info.zip`
 
 4. Then access the directory by using:
-`cd jhupiego_rise_phase1-master/`
+`cd jhupiego_rise_phase1-feature-paper_stats_info/`
 
 5. Then check the contents by running:
 `ls -a` for linux and `dir` for windows
@@ -120,6 +120,14 @@ This folder contains the hiv_support_package with module which do feature engine
     - [**Figures**](Figures)
 - [**src**](src)
     - [**hiv_support_package**](src/hiv_support_package)
+- [**notebooks-for-sharing**](notebooks-for-sharing)
+    - [**uv_creation**](notebooks-for-sharing/uv_creation)
+    - [**modelling**](notebooks-for-sharing/modelling)
+
+Phase 2 (updated modelling) also includes: 
+    - [**DataChecks**](notebooks/DataChecks)
+    - [**2022_model**](notebooks/2022_model)
+
 
 ## How to Run
 ***
